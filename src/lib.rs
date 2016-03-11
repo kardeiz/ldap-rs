@@ -124,8 +124,8 @@ impl Conn {
 
 #[derive(Debug)]
 pub struct Message {
-  pub ptr: *mut ffi::LDAPMessage,
-  pub destroyable: bool
+    pub ptr: *mut ffi::LDAPMessage,
+    pub destroyable: bool
 }
 
 impl Drop for Message {

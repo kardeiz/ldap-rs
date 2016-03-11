@@ -22,7 +22,5 @@ fn build_ffi() {
 }
 
 fn main() {
-    if !::std::fs::metadata("src/ffi.rs").is_ok() { 
-        build_ffi();
-    }
+    if !::std::fs::metadata("src/ffi.rs").is_ok() { build_ffi(); }
 }
