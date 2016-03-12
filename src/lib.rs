@@ -16,7 +16,7 @@ pub type LocalResult<T> = Result<T, Box<Error+Send+Sync>>;
 
 #[derive(Debug)]
 pub struct Conn {
-  pub ptr: *mut ffi::LDAP
+    pub ptr: *mut ffi::LDAP
 }
 
 impl Drop for Conn {
@@ -318,7 +318,7 @@ mod tests {
 
         println!("{:?}", util.find_and_authenticate(
             &conn, 
-            "&(givenname=Jacob)(sn=Brown))",
+            "&(givenname=J*)(sn=Brown))",
             &["mail", "givenname"],
             "foo"));
 
